@@ -6,9 +6,3 @@
  * and open the template in the editor.
  */
 
-include 'header.php';
-?>
-<?php
-
-
-include 'footer.php';
