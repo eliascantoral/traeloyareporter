@@ -7,8 +7,8 @@
  */
 
 include 'header.php';
-?>
-<?php
+
+include 'blocks/login.php';
 
 
 include 'footer.php';
