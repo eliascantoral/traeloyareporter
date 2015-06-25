@@ -7,7 +7,7 @@
  */
 
 ?>
-        </div>        
+        </div><!---Div Container main-->
         <div class="modal fade" id="ajax_loader"></div>      
     </body>
 </html>

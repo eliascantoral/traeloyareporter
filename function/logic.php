@@ -7,8 +7,8 @@
 	function get_variable($var){
 		switch($var){
                         case "sitename": return "@emcode";
-                        case "prfx": return "simdosis";
-			case "home": return "http://localhost/medicina/simdosis";
+                        case "prfx": return "quimica";
+			case "home": return "http://localhost/games/quimica/index.php";
 			case "ajax": return "function/service.php";
 			default:{return "";}
 		}

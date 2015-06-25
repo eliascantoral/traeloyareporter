@@ -32,18 +32,32 @@
                                 $this->close_connect($link);
                             }                            
                             return array($status, $return);
-                        }                        
-                        /*private function makequery($query){
-                            $con = $this->start_connect();
-                            $retorno = false;
-                            $result = mysqli_query($con, $query);
-                            if($result){
-                                $retorno = $result;
+                        }
+                        private function makelog($user, $action, $description, $ip = "0.0.0.0"){
+                            $time = time();
+                            $query ="INSERT INTO `log` (`id`, `time`, `userid`, `ip`, `action`, `description`) VALUES (NULL, '".$time."', '".$user."', '".$ip."', '".$action."', '".$description."');";
+                            $result = $this->makequery($query);
+                            return $result[0];                            
+                        }
+/*********************************************************************************************************/
+                        function trylogin($user, $pass){
+                            $return = array(false, "Error 101");
+                            $query = "SELECT `id` FROM `user` WHERE `username`='".$user."' AND `password` = '".$pass."';";
+                            $this->makelog($user, "try login", "Usuario '".$user."' intenta ingresar al sistema");
+                            $result = $this->makequery($query);
+                            if($result[0]){
+                                while($row = mysqli_fetch_array($result[1])){
+                                    $return = array(true, $row['id']);
+                                    $this->makelog($user, "login", "Usuario '".$user."' ingresar al sistema");
+                                }
+                            }else{
+                                $return = $result;
                             }
-                            $this->close_connect($con);
-                            return $retorno;
-                        }*/
-                        
- /********************************************************************************************************/
+                            return $return;
+                        }
+                        function tryloginfb($userid){
+                            
+                        }
+/*********************************************************************************************************/
 	}
 ?>
