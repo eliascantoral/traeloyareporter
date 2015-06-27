@@ -57,7 +57,7 @@ and open the template in the editor.
                         <span class="icon-bar"></span>
                         </button>
                       <a class="navbar-brand" href="#">
-                          <img alt="Brand" src="image/banner.png" height="100%">
+                          <img alt="Brand" src="image/logomin.png" height="100%">
                       </a>
                     </div>                     
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                          
@@ -65,7 +65,7 @@ and open the template in the editor.
                             <p class="navbar-text navbar-right">Bienvenido <a href="#" class="navbar-link"><?php echo get_userdata("name");?></a>&nbsp;&nbsp;<a href="?logout=ok" class="navbar-link">Salir</a></p>                            
                         <?php }else{?>
                             <ul class="nav navbar-nav navbar-right">                                    
-                                <li><a href="#" class="navbar-link">Iniciar sesión</a></li>
+                                <li><a href="login.php" class="navbar-link">Iniciar sesión</a></li>
                                 <li><a href="#" class="navbar-link">Registrame</a></li>                                    
                             </ul>
                         <?php }?>
