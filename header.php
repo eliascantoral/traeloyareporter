@@ -45,8 +45,8 @@ and open the template in the editor.
         <meta name="theme-color" content="#ffffff">            
     </head>
     <body>
-        <div class="container-fluid">
-            
+        <div id="mainheader" class="container-fluid">
+                
                 <nav class="navbar navbar-default navbar-fixed-top">
                  <div class="container">
                     <div class="navbar-header">
