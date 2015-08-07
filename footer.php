@@ -34,6 +34,7 @@
 	
 	
 	function ajax_(action, data, update, dest){
+              
                 ajax_loading();
 		$.ajax({
 		  async:false, 
@@ -51,8 +52,8 @@
 					 window.location.assign(dest);
 				}
 				
-			}else if(dest!=""){						
-				document.getElementById(dest).value=respuesta;
+			}else if(dest!=""){	                                
+                                $("#"+dest).val(respuesta);				
 			}
 			ajax_end();
 		  },

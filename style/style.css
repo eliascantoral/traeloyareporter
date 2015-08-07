@@ -35,6 +35,19 @@ and open the template in the editor.
   left: 50%;  
   transform: translate(-50%, -50%);    
 }
+#login_background{
+    min-height: 200px;
+    height: auto;
+    width: 300px;
+    padding: 20px;
+    color: #FFF !important;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 0px solid #000000;    
+    background: rgba(0,0,0,0.7);
+}   
+
 
 .message{
     display: none;

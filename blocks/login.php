@@ -11,45 +11,43 @@
                 <div id="login_background">
                         <h3>Bienvenido</h3>
                         <p>Por favor, ingrese su usuario y contraseña.</p>
-                        <form class="form-horizontal" method="POST">
-                          <input type="hidden" name="success_url" value="http://www.google.com/" /> 
+                        <form class="form-horizontal" id="loginform" method="POST">                            
+                            <input type="text" id="login_answer" value="">
                           <div class="form-group">            
                                 <div class="col-sm-12">
-                                  <input type="text" class="form-control" id="username" name="username" placeholder="Usuario" autofocus>
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="Usuario" autofocus required="" value="a">
                                 </div>
                           </div>
                           <div class="form-group">            
                                 <div class="col-sm-12">
-                                  <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required="" value="BB">
                                 </div>
                           </div>          
                           <div class="form-group">
                                 <div class="col-sm-12" align='right'>
-                                  <button type="submit" class="btn btn-danger">Ingresar</button>
+                                  <button type="submit" class="btn btn-info">Ingresar</button>
                                 </div>
                           </div>
                           <div class="alert alert-danger message" role="alert" id="loginmessage"></div>
                         </form>
                 </div>
 </div>
-            <script>
-                $( document ).ready( function(){
-                        $("#mainheader").hide("fast");
-                });
-            </script>
-            
-<style>
-    #login_background{
-        min-height: 200px;
-        height: auto;
-        width: 300px;
-        padding: 20px;
-        color: #FFF !important;
-        border-radius: 5px 5px 5px 5px;
-        -moz-border-radius: 5px 5px 5px 5px;
-        -webkit-border-radius: 5px 5px 5px 5px;
-        border: 0px solid #000000;    
-        background: rgba(0,0,0,0.7);
-    }    
-    
-</style>
+<script>
+    $( document ).ready( function(){
+            $("#mainheader").hide("fast");
+    });
+    $("#loginform").submit(function(event){
+        event.preventDefault();
+        var user = $("#username").val();
+        var pass = $("#password").val();
+        ajax_("0", "&user="+user+"&pass="+pass, false, "login_answer");
+        var answer = document.getElementById("login_answer").value;
+        json = jQuery.parseJSON( answer );
+        if(json.r==1){
+             location.reload();
+        }else{
+             show_message("loginmessage",json.d);
+        }
+
+    })
+</script>           
