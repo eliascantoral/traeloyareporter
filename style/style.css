@@ -29,10 +29,22 @@ and open the template in the editor.
     width: auto;
     margin: 50px;
 }
-/*
 .centerd{
   position: fixed;
   top: 50%;
   left: 50%;  
   transform: translate(-50%, -50%);    
-}*/
+}
+
+.message{
+    display: none;
+}
+
+.ajax_loader{
+    background-image: url('image/ajax-loader.gif');    
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 100%;
+    min-height: 200px;
+    height: auto;    
+}
