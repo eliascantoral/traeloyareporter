@@ -62,7 +62,7 @@ and open the template in the editor.
                     </div>                     
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                          
                         <?php if(is_login()){?>
-                            <p class="navbar-text navbar-right">Bienvenido <a href="#" class="navbar-link"><?php echo get_userdata("name");?></a>&nbsp;&nbsp;<a href="?logout=ok" class="navbar-link">Salir</a></p>                            
+                            <p class="navbar-text navbar-right">Bienvenido <a href="#" class="navbar-link"><?php echo get_userdata("fname");?></a>&nbsp;&nbsp;<a href="?logout=ok" class="navbar-link">Salir</a></p>                            
                         <?php }else{?>
                             <ul class="nav navbar-nav navbar-right">                                    
                                 <li><a href="login.php" class="navbar-link">Iniciar sesión</a></li>

@@ -1,6 +1,6 @@
 <?php 
 	/** MySQL database name */
-	define('DB_NAME2', 'game_quimica');
+	define('DB_NAME2', 'traeloya');
 	
 	/** MySQL database username */
 	define('DB_USER2', 'root');

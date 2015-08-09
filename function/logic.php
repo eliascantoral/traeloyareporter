@@ -7,8 +7,8 @@
 	function get_variable($var){
 		switch($var){
                         case "sitename": return "@emcode";
-                        case "prfx": return "gaus";
-			case "home": return "http://localhost/gauss";
+                        case "prfx": return "traeloya";
+			case "home": return "http://localhost/traeloya";
 			case "ajax": return "function/service.php";
 			default:{return "";}
 		}
@@ -97,5 +97,5 @@
         }        
 /********************************************************************************************************************/
     require_once 'login_logic.php';
-        
+    require_once 'user_logic.php';   
 ?>

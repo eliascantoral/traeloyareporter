@@ -7,5 +7,15 @@
  */
 
 function try_login($user, $pass){
-    echo "Llego";
+    include_once 'backend/backend.php';
+    $backend = new backend();
+    $return =  $backend->trylogin($user, $pass);
+    if($return[0]){
+        session_start();
+        $_SESSION[get_variable("prfx")."_userid"] = $return[1][0];
+        $_SESSION[get_variable("prfx")."_fname"] = $return[1][1];
+        $_SESSION[get_variable("prfx")."_username"] = $user;
+        return true;
+    }
+    return false;
 }
