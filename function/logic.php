@@ -6,9 +6,9 @@
 	}
 	function get_variable($var){
 		switch($var){
-                        case "sitename": return "@emcode";
+                        case "sitename": return "My@ppSoftware";
                         case "prfx": return "traeloya";
-			case "home": return "http://localhost/traeloya";
+			case "home": return "http://54.186.59.17/traeloya/";
 			case "ajax": return "function/service.php";
 			default:{return "";}
 		}

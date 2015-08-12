@@ -3,10 +3,10 @@
 	
 	class mssqlbackend{
 			private function start_connect(){
-                                    $serverName = "ty-bodega.cw0sv9miiixy.us-west-2.rds.amazonaws.com"; //serverName\instanceName
-                                    $connectionInfo = array( "Database"=>"ty-bodega", "UID"=>"ty_admin", "PWD"=>"pideloya2015");
-                                    $conn = sqlsrv_connect( $serverName, $connectionInfo);
-                                    return $conn;                                      
+                                        $serverName = DB_HOST_mssql; //serverName\instanceName
+                                        $connectionInfo = array( "Database"=>DB_NAME_mssql, "UID"=>DB_USER_mssql, "PWD"=>DB_PASSWORD_mssql);
+                                        $conn = sqlsrv_connect( $serverName, $connectionInfo);
+                                        return $conn;                              
 				}
 
 			private function close_connect($con){
@@ -19,7 +19,7 @@
                                  $this->close_connect($conn);
                             }else{
                                  echo "Conexión no se pudo establecer.<br />";
-                                 die( print_r( sqlsrv_errors(), true));
+                                 die( print_array( sqlsrv_errors(), true));
                             } 
                         }
 

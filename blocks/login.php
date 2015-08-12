@@ -12,15 +12,15 @@
                         <h3>Bienvenido</h3>
                         <p>Por favor, ingrese su usuario y contraseña.</p>
                         <form class="form-horizontal" id="loginform" method="POST">                            
-                            <input type="text" id="login_answer" value="">
+                            <input type="hidden" id="login_answer" value="">
                           <div class="form-group">            
                                 <div class="col-sm-12">
-                                    <input type="text" class="form-control" id="username" name="username" placeholder="Usuario" autofocus required="" value="a">
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="Usuario" autofocus required="" value="">
                                 </div>
                           </div>
                           <div class="form-group">            
                                 <div class="col-sm-12">
-                                    <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required="" value="BB">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required="" value="">
                                 </div>
                           </div>          
                           <div class="form-group">
